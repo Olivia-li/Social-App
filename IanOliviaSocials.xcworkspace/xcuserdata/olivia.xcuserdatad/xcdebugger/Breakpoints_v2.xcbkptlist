@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "59D84E29-DFAE-4043-A25C-BEDD93918097"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96B5F3A4-B384-4067-B9C9-5B55533E792F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IanOliviaSocials/Controller/SignupVC/SignupVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "SignupVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "96B5F3A4-B384-4067-B9C9-5B55533E792F - 3340159bc73b0500"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IanOliviaSocials.SignupVC.emailTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "IanOliviaSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olivia/Documents/IanOliviaSocials/IanOliviaSocials/Controller/SignupVC/SignupVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "96B5F3A4-B384-4067-B9C9-5B55533E792F - be61e5bf011593c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IanOliviaSocials.SignupVC.emailTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "IanOliviaSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olivia/Documents/IanOliviaSocials/IanOliviaSocials/Controller/SignupVC/SignupVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "96B5F3A4-B384-4067-B9C9-5B55533E792F - 8f13c64270016003"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IanOliviaSocials.SignupVC.emailTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "IanOliviaSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olivia/Documents/IanOliviaSocials/IanOliviaSocials/Controller/SignupVC/SignupVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "96B5F3A4-B384-4067-B9C9-5B55533E792F - 4aefd8a1c39f6504"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IanOliviaSocials.SignupVC.emailTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "IanOliviaSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olivia/Documents/IanOliviaSocials/IanOliviaSocials/Controller/SignupVC/SignupVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "96B5F3A4-B384-4067-B9C9-5B55533E792F - 731b42d8ab171fc2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IanOliviaSocials.SignupVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; IanOliviaSocials.SignupVC"
+                  moduleName = "IanOliviaSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olivia/Documents/IanOliviaSocials/IanOliviaSocials/Controller/SignupVC/SignupVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "375">
+               </Location>
+               <Location
+                  uuid = "96B5F3A4-B384-4067-B9C9-5B55533E792F - 8e12a969f9ec6b71"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "IanOliviaSocials.SignupVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;IanOliviaSocials.SignupVC&gt;"
+                  moduleName = "IanOliviaSocials"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olivia/Documents/IanOliviaSocials/IanOliviaSocials/Controller/SignupVC/SignupVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "313">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
