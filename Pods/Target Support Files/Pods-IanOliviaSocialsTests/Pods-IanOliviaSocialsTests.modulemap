@@ -1,0 +1,6 @@
+framework module Pods_IanOliviaSocialsTests {
+  umbrella header "Pods-IanOliviaSocialsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
