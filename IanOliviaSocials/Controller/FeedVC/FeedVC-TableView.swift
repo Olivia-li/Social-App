@@ -12,7 +12,7 @@ import Firebase
 
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 //REPLACE WITH NUMBER OF EVENTS
+        return 10 //REPLACE WITH NUMBER OF EVENTS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,6 +24,10 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         clickedEventId = indexPath.row
         segueNum = 1
         self.performSegue(withIdentifier: "toDetailVC", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 440
     }
     
 }
