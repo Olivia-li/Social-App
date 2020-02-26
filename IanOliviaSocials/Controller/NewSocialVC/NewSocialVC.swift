@@ -16,6 +16,7 @@ class NewSocialVC: UIViewController {
     @IBOutlet weak var eventNameTextfield: UITextField!
     @IBOutlet weak var descriptionTextfield: UITextField!
     @IBOutlet weak var datepicker: UIDatePicker!
+    //Sorry I actually have no idea how to use a datepicker i just saw it and was like cool...can prob just look up field names tho
     
     var chosenImage: UIImage = UIImage(imageLiteralResourceName: "default-image")
     //Initialized with "default-image" in Assets.xcassets, replaced with chosen image after handleChooseImage is ran and image successfully chosen
@@ -29,6 +30,7 @@ class NewSocialVC: UIViewController {
     }
     
     @IBAction func createClicked(_ sender: Any) {
+        
     }
     
 }

@@ -209,6 +209,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vbF-kg-wMp" id="6Li-0c-8tr"/>
+                                    <outlet property="delegate" destination="vbF-kg-wMp" id="qGQ-Pn-htf"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-Dr-Pzg">
                                 <rect key="frame" x="271" y="20" width="123" height="30"/>
@@ -244,6 +248,8 @@
                     <navigationItem key="navigationItem" id="1RO-Qb-UoE"/>
                     <connections>
                         <outlet property="tableView" destination="WD5-O3-HLm" id="2HC-Eb-luZ"/>
+                        <segue destination="2cQ-bC-FUR" kind="show" identifier="toDetailVC" id="eFi-jP-S7p"/>
+                        <segue destination="3tn-v8-nlS" kind="show" identifier="toNewSocialVC" id="h7a-Sy-fF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhZ-Ji-Kx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,44 +261,44 @@
             <objects>
                 <viewController storyboardIdentifier="DetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2cQ-bC-FUR" customClass="DetailVC" customModule="IanOliviaSocials" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8ag-Jj-Kdv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-qf-ctE">
-                                <rect key="frame" x="20" y="121" width="374" height="48"/>
+                                <rect key="frame" x="20" y="77" width="374" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host's username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-fL-7kG">
-                                <rect key="frame" x="20" y="584" width="374" height="30"/>
+                                <rect key="frame" x="20" y="530" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-BI-9kE">
-                                <rect key="frame" x="20" y="178" width="374" height="389"/>
+                                <rect key="frame" x="20" y="134" width="374" height="379"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsW-wf-gJU">
-                                <rect key="frame" x="20" y="626" width="203" height="30"/>
+                                <rect key="frame" x="20" y="572" width="203" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description content..." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJG-Gf-aet">
-                                <rect key="frame" x="20" y="664" width="374" height="24"/>
+                                <rect key="frame" x="20" y="610" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People Interested: #" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4w-Ce-Hmv">
-                                <rect key="frame" x="20" y="710" width="374" height="30"/>
+                                <rect key="frame" x="20" y="656" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-Rm-otQ">
-                                <rect key="frame" x="140" y="776" width="134" height="48"/>
+                                <rect key="frame" x="140" y="722" width="134" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="Interested"/>
                                 <connections>
@@ -327,6 +333,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bf4-EG-H2e"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lgg-WB-Kpo"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="NJG-Gf-aet" id="IEX-t1-SQa"/>
                         <outlet property="eventImage" destination="bJ6-BI-9kE" id="WE8-if-4CX"/>
@@ -344,7 +351,7 @@
             <objects>
                 <viewController storyboardIdentifier="NewSocialVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3tn-v8-nlS" customClass="NewSocialVC" customModule="IanOliviaSocials" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PkV-W2-1mx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name of Event" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVP-kN-TVu">
@@ -399,6 +406,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Lt0-pt-YDY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="beN-iu-RAz"/>
                     <connections>
                         <outlet property="datepicker" destination="vU2-bA-l3E" id="0YF-A1-xp7"/>
                         <outlet property="descriptionTextfield" destination="fRX-Rl-YXH" id="eOu-Gp-k22"/>

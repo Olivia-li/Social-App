@@ -20,9 +20,14 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Update outlets with the event provided when segued
     }
     
     @IBAction func interestedClicked(_ sender: Any) {
+        //increment var for amount of interested users to this event
+        
+        //Spec asks for this button to show up as being checked after clicked so user can select and deselect. Will come back to that
     }
     
 }
