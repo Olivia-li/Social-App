@@ -17,13 +17,18 @@ class NewSocialVC: UIViewController {
     @IBOutlet weak var descriptionTextfield: UITextField!
     @IBOutlet weak var datepicker: UIDatePicker!
     
+    var chosenImage: UIImage = UIImage(imageLiteralResourceName: "default-image")
+    //Initialized with "default-image" in Assets.xcassets, replaced with chosen image after handleChooseImage is ran and image successfully chosen
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func chooseImageClicked(_ sender: Any) {
+        handleChooseImage()
     }
     
     @IBAction func createClicked(_ sender: Any) {
     }
+    
 }
