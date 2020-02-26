@@ -39,7 +39,7 @@ class LoginVC: UIViewController {
                 self.displayAlert(title: "Error", message: "user field cannot be empty")
                 return
             }
-            self.performSegue(withIdentifier: "toFeedVC", sender: self)
+            self.performSegue(withIdentifier: "LoginVCtoNC", sender: self)
         }
     }
     
@@ -52,8 +52,8 @@ class LoginVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         super.prepare(for: segue, sender: (Any).self)
-        if let FeedVC = segue.destination as? FeedVC {
-            FeedVC.modalPresentationStyle = .fullScreen
+        if let NC = segue.destination as? UINavigationController {
+            NC.modalPresentationStyle = .fullScreen
         }
     }
 }

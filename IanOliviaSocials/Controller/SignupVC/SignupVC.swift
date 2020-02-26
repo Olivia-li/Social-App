@@ -41,7 +41,7 @@ class SignupVC: UIViewController {
             let newUserId = usersNode.childByAutoId().key
             let userNode = usersNode.child(newUserId!)
             userNode.updateChildValues(["name": name, "email": email, "username": username])
-            self.performSegue(withIdentifier: "toMainFeed", sender: self)
+            self.performSegue(withIdentifier: "SignupVCtoNC", sender: self)
         }
     }
     
@@ -58,8 +58,8 @@ class SignupVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         super.prepare(for: segue, sender: (Any).self)
-        if let FeedVC = segue.destination as? FeedVC {
-            FeedVC.modalPresentationStyle = .fullScreen
+        if let NC = segue.destination as? UINavigationController {
+            NC.modalPresentationStyle = .fullScreen
         }
     }
     

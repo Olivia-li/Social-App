@@ -65,12 +65,12 @@
                     <connections>
                         <outlet property="passwordTextfield" destination="Uoa-dr-fqP" id="jeW-9A-tvx"/>
                         <outlet property="usernameTextfield" destination="lYd-pu-vgV" id="mmu-Nt-GIe"/>
-                        <segue destination="vbF-kg-wMp" kind="show" identifier="toFeedVC" id="Ivd-fR-aBu"/>
+                        <segue destination="Scx-me-q3s" kind="show" identifier="LoginVCtoNC" id="fIP-p0-ZBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921.7391304347827" y="-200.22321428571428"/>
+            <point key="canvasLocation" x="1070" y="-200"/>
         </scene>
         <!--SignupVC-->
         <scene sceneID="CHu-lb-zPh">
@@ -136,12 +136,12 @@
                         <outlet property="nameTextField" destination="ZCx-pD-x2t" id="odP-cq-u3x"/>
                         <outlet property="passwordTextField" destination="sU1-mZ-M47" id="y1G-t6-PI5"/>
                         <outlet property="usernameTextField" destination="dCu-g1-6y2" id="IbA-g9-AZv"/>
-                        <segue destination="vbF-kg-wMp" kind="show" identifier="toMainFeed" id="lya-Q5-8cH"/>
+                        <segue destination="Scx-me-q3s" kind="show" identifier="SignupVCtoNC" id="FEa-k4-ico"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9q-rl-qns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921.7391304347827" y="522.99107142857144"/>
+            <point key="canvasLocation" x="1070" y="523"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="I3b-Gu-5uW">
@@ -152,7 +152,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WD5-O3-HLm">
-                                <rect key="frame" x="0.0" y="62" width="414" height="780"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="425" id="t4o-2o-HQK" customClass="EventCell" customModule="IanOliviaSocials" customModuleProvider="target">
@@ -215,14 +215,14 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-Dr-Pzg">
-                                <rect key="frame" x="271" y="20" width="123" height="30"/>
+                                <rect key="frame" x="271" y="76" width="123" height="30"/>
                                 <state key="normal" title="Create New Event"/>
                                 <connections>
                                     <action selector="newEventClicked:" destination="vbF-kg-wMp" eventType="touchUpInside" id="vdB-k9-Qz5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSe-qu-Dd0">
-                                <rect key="frame" x="20" y="20" width="48" height="30"/>
+                                <rect key="frame" x="20" y="76" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutClicked:" destination="vbF-kg-wMp" eventType="touchUpInside" id="cAr-QA-9cc"/>
@@ -265,7 +265,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-qf-ctE">
-                                <rect key="frame" x="20" y="77" width="374" height="48"/>
+                                <rect key="frame" x="20" y="133" width="374" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -277,7 +277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-BI-9kE">
-                                <rect key="frame" x="20" y="134" width="374" height="379"/>
+                                <rect key="frame" x="20" y="190" width="374" height="323"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsW-wf-gJU">
                                 <rect key="frame" x="20" y="572" width="203" height="30"/>
@@ -424,7 +424,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="djY-Jx-uL4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bzn-yI-h5Q">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -434,10 +434,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExQ-79-Srh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="-621"/>
+            <point key="canvasLocation" x="1988" y="127"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lya-Q5-8cH"/>
+        <segue reference="FEa-k4-ico"/>
     </inferredMetricsTieBreakers>
 </document>
