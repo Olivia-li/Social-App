@@ -23,7 +23,7 @@ extension NewSocialVC: UIImagePickerControllerDelegate, UINavigationControllerDe
                 imagePickerController.sourceType = .camera
                 self.present(imagePickerController, animated: true, completion: nil)
             } else {
-                //alert "Camera not Available"
+                util.displayAlert(title: "Error", message: "Camera not Available", vc: self)
             }
         }))
         

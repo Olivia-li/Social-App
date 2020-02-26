@@ -29,11 +29,11 @@ class SignupVC: UIViewController {
         
         auth.createUser(withEmail: email, password: password) { (user, error) in
             guard error == nil else {
-                self.displayAlert(title: "Error", message: error.debugDescription)
+                util.displayAlert(title: "Error", message: error.debugDescription, vc: self)
                 return
             }
             guard user != nil else {
-                self.displayAlert(title: "Error", message: "No user")
+                util.displayAlert(title: "Error", message: "No user", vc: self)
                 return
             }
             let db = Database.database().reference()
@@ -43,13 +43,6 @@ class SignupVC: UIViewController {
             userNode.updateChildValues(["name": name, "email": email, "username": username])
             self.performSegue(withIdentifier: "SignupVCtoNC", sender: self)
         }
-    }
-    
-    func displayAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func signupClicked(_ sender: Any) {

@@ -12,6 +12,7 @@
 		0E15790F24064B5200AB2AD8 /* FeedVC-TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790E24064B5200AB2AD8 /* FeedVC-TableView.swift */; };
 		0E15791124064C0D00AB2AD8 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15791024064C0D00AB2AD8 /* EventCell.swift */; };
 		0E1579132406566800AB2AD8 /* NewSocialVC-ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1579122406566800AB2AD8 /* NewSocialVC-ImagePickerController.swift */; };
+		0E157915240667BC00AB2AD8 /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E157914240667BC00AB2AD8 /* util.swift */; };
 		0EC303112404A96300A2270D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC303102404A96300A2270D /* LoginVC.swift */; };
 		0EC303142404AFA100A2270D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC303132404AFA100A2270D /* FeedVC.swift */; };
 		30F7EDE9C3A787F901215926 /* Pods_IanOliviaSocials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EABD0EA91D99C39C22E980 /* Pods_IanOliviaSocials.framework */; };
@@ -52,6 +53,7 @@
 		0E15790E24064B5200AB2AD8 /* FeedVC-TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC-TableView.swift"; sourceTree = "<group>"; };
 		0E15791024064C0D00AB2AD8 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = IanOliviaSocials/Controller/FeedVC/EventCell.swift; sourceTree = SOURCE_ROOT; };
 		0E1579122406566800AB2AD8 /* NewSocialVC-ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocialVC-ImagePickerController.swift"; sourceTree = "<group>"; };
+		0E157914240667BC00AB2AD8 /* util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
 		0EC303102404A96300A2270D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0EC303132404AFA100A2270D /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		10EABD0EA91D99C39C22E980 /* Pods_IanOliviaSocials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IanOliviaSocials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 				45D4A6FB24049AE700787385 /* Info.plist */,
 				45D4A6EF24049AE700787385 /* SceneDelegate.swift */,
 				45D4A6F324049AE700787385 /* Main.storyboard */,
+				0E157914240667BC00AB2AD8 /* util.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				45D14FD2240522CE0047494E /* SignupVC.swift in Sources */,
 				45D4A6EE24049AE700787385 /* AppDelegate.swift in Sources */,
 				0E15791124064C0D00AB2AD8 /* EventCell.swift in Sources */,
+				0E157915240667BC00AB2AD8 /* util.swift in Sources */,
 				0E15790D2405F26600AB2AD8 /* NewSocialVC.swift in Sources */,
 				0E1579132406566800AB2AD8 /* NewSocialVC-ImagePickerController.swift in Sources */,
 				0EC303142404AFA100A2270D /* FeedVC.swift in Sources */,

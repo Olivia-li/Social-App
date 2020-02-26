@@ -32,22 +32,15 @@ class LoginVC: UIViewController {
         //Spec asked for login with username not email fix later
         auth.signIn(withEmail: username, password: password) { (user, error) in
             guard error == nil else {
-                self.displayAlert(title: "Error", message: "login error")
+                util.displayAlert(title: "Error", message: "login error", vc: self)
                 return
             }
             guard user != nil else {
-                self.displayAlert(title: "Error", message: "user field cannot be empty")
+                util.displayAlert(title: "Error", message: "user field cannot be empty", vc: self)
                 return
             }
             self.performSegue(withIdentifier: "LoginVCtoNC", sender: self)
         }
-    }
-    
-    func displayAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
