@@ -30,7 +30,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3g-aI-fQX"/>
+                                    <action selector="loginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3g-aI-fQX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-Vt-VgI">
@@ -155,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="62" width="414" height="780"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="425" id="t4o-2o-HQK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="425" id="t4o-2o-HQK" customClass="EventCell" customModule="IanOliviaSocials" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="425"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t4o-2o-HQK" id="s98-xk-mL4">
@@ -171,13 +171,13 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-sU-hV4">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-sU-hV4">
                                                             <rect key="frame" x="0.0" y="49.5" width="374" height="29"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbj-NC-wLG">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbj-NC-wLG">
                                                             <rect key="frame" x="0.0" y="78.5" width="374" height="295.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# people are interested in this event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4x-sK-9eb">
@@ -201,16 +201,28 @@
                                             <constraint firstItem="vhY-5Y-nNB" firstAttribute="top" secondItem="t4o-2o-HQK" secondAttribute="top" constant="11" id="RV0-3E-iBj"/>
                                             <constraint firstAttribute="trailing" secondItem="vhY-5Y-nNB" secondAttribute="trailing" constant="20" id="u13-FU-ZaX"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="eventImage" destination="qbj-NC-wLG" id="Kon-jj-TqP"/>
+                                            <outlet property="eventNameLabel" destination="jCQ-h2-Uw5" id="dN8-a2-gvI"/>
+                                            <outlet property="interestNumLabel" destination="O4x-sK-9eb" id="7yb-VD-rl2"/>
+                                            <outlet property="usernameLabel" destination="Gaa-sU-hV4" id="nas-fK-1p1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-Dr-Pzg">
                                 <rect key="frame" x="271" y="20" width="123" height="30"/>
                                 <state key="normal" title="Create New Event"/>
+                                <connections>
+                                    <action selector="newEventClicked:" destination="vbF-kg-wMp" eventType="touchUpInside" id="vdB-k9-Qz5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSe-qu-Dd0">
                                 <rect key="frame" x="20" y="20" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="vbF-kg-wMp" eventType="touchUpInside" id="cAr-QA-9cc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -230,6 +242,9 @@
                         <viewLayoutGuide key="safeArea" id="kGm-N4-eQR"/>
                     </view>
                     <navigationItem key="navigationItem" id="1RO-Qb-UoE"/>
+                    <connections>
+                        <outlet property="tableView" destination="WD5-O3-HLm" id="2HC-Eb-luZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhZ-Ji-Kx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,6 +295,9 @@
                                 <rect key="frame" x="140" y="776" width="134" height="48"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <state key="normal" title="Interested"/>
+                                <connections>
+                                    <action selector="interestedClicked:" destination="2cQ-bC-FUR" eventType="touchUpInside" id="jVO-0M-4Ya"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -309,6 +327,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bf4-EG-H2e"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="NJG-Gf-aet" id="IEX-t1-SQa"/>
+                        <outlet property="eventImage" destination="bJ6-BI-9kE" id="WE8-if-4CX"/>
+                        <outlet property="eventNameLabel" destination="CH9-qf-ctE" id="kqp-rT-9CU"/>
+                        <outlet property="interestNumLabel" destination="p4w-Ce-Hmv" id="Duu-p8-VGX"/>
+                        <outlet property="usernameLabel" destination="bfQ-fL-7kG" id="iiF-os-Eeb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZO-GN-7LF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,14 +366,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-bA-l3E">
-                                <rect key="frame" x="20" y="505" width="374" height="111"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload an image for your event:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpy-cm-XvI">
+                                <rect key="frame" x="20" y="345" width="244" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvd-D0-LIE">
+                                <rect key="frame" x="272" y="339" width="110" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Choose Image"/>
+                                <connections>
+                                    <action selector="chooseImageClicked:" destination="3tn-v8-nlS" eventType="touchUpInside" id="L6X-Rd-imH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZU-Hs-Edj">
+                                <rect key="frame" x="165" y="669" width="89" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createClicked:" destination="3tn-v8-nlS" eventType="touchUpInside" id="yxe-9Q-T6o"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-bA-l3E">
+                                <rect key="frame" x="20" y="417" width="374" height="111"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Lt0-pt-YDY"/>
                     </view>
+                    <connections>
+                        <outlet property="datepicker" destination="vU2-bA-l3E" id="0YF-A1-xp7"/>
+                        <outlet property="descriptionTextfield" destination="fRX-Rl-YXH" id="eOu-Gp-k22"/>
+                        <outlet property="eventNameTextfield" destination="cVP-kN-TVu" id="LrG-oE-P8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dq9-AV-lkc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -20,7 +20,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func loginButtonPressed(_ sender: Any) {
+    @IBAction func loginClicked(_ sender: Any) {
         handleLogin()
     }
     

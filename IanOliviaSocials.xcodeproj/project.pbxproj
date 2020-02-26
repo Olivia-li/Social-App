@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0E15790B2405F25B00AB2AD8 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790A2405F25B00AB2AD8 /* DetailVC.swift */; };
 		0E15790D2405F26600AB2AD8 /* NewSocialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790C2405F26600AB2AD8 /* NewSocialVC.swift */; };
+		0E15790F24064B5200AB2AD8 /* FeedVC-TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790E24064B5200AB2AD8 /* FeedVC-TableView.swift */; };
+		0E15791124064C0D00AB2AD8 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15791024064C0D00AB2AD8 /* EventCell.swift */; };
 		0EC303112404A96300A2270D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC303102404A96300A2270D /* LoginVC.swift */; };
 		0EC303142404AFA100A2270D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC303132404AFA100A2270D /* FeedVC.swift */; };
 		30F7EDE9C3A787F901215926 /* Pods_IanOliviaSocials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EABD0EA91D99C39C22E980 /* Pods_IanOliviaSocials.framework */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		0E15790A2405F25B00AB2AD8 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		0E15790C2405F26600AB2AD8 /* NewSocialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialVC.swift; sourceTree = "<group>"; };
+		0E15790E24064B5200AB2AD8 /* FeedVC-TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC-TableView.swift"; sourceTree = "<group>"; };
+		0E15791024064C0D00AB2AD8 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = IanOliviaSocials/Controller/FeedVC/EventCell.swift; sourceTree = SOURCE_ROOT; };
 		0EC303102404A96300A2270D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0EC303132404AFA100A2270D /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		10EABD0EA91D99C39C22E980 /* Pods_IanOliviaSocials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IanOliviaSocials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC303132404AFA100A2270D /* FeedVC.swift */,
+				0E15790E24064B5200AB2AD8 /* FeedVC-TableView.swift */,
 			);
 			path = FeedVC;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		45D14FD4240522F10047494E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E15791024064C0D00AB2AD8 /* EventCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,12 +506,14 @@
 			files = (
 				45D14FD2240522CE0047494E /* SignupVC.swift in Sources */,
 				45D4A6EE24049AE700787385 /* AppDelegate.swift in Sources */,
+				0E15791124064C0D00AB2AD8 /* EventCell.swift in Sources */,
 				0E15790D2405F26600AB2AD8 /* NewSocialVC.swift in Sources */,
 				0EC303142404AFA100A2270D /* FeedVC.swift in Sources */,
 				0EC303112404A96300A2270D /* LoginVC.swift in Sources */,
 				45D4A6F024049AE700787385 /* SceneDelegate.swift in Sources */,
 				45D14FD8240523C10047494E /* SignupManager.swift in Sources */,
 				0E15790B2405F25B00AB2AD8 /* DetailVC.swift in Sources */,
+				0E15790F24064B5200AB2AD8 /* FeedVC-TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

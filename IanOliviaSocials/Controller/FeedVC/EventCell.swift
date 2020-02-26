@@ -1,5 +1,5 @@
 //
-//  DetailVC.swift
+//  EventCell.swift
 //  IanOliviaSocials
 //
 //  Created by Ian Shen on 2/25/20.
@@ -10,19 +10,11 @@ import Foundation
 import UIKit
 import Firebase
 
-class DetailVC: UIViewController {
+class EventCell: UITableViewCell {
     
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var interestNumLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    @IBAction func interestedClicked(_ sender: Any) {
-    }
     
 }

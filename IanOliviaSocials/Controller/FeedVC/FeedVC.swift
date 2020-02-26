@@ -12,8 +12,16 @@ import Firebase
 
 class FeedVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func logoutClicked(_ sender: Any) {
+    }
+    
+    @IBAction func newEventClicked(_ sender: Any) {
+    }
 }
