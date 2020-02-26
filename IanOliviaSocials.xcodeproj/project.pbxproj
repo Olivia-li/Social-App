@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E15790B2405F25B00AB2AD8 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790A2405F25B00AB2AD8 /* DetailVC.swift */; };
+		0E15790D2405F26600AB2AD8 /* NewSocialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790C2405F26600AB2AD8 /* NewSocialVC.swift */; };
 		0EC303112404A96300A2270D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC303102404A96300A2270D /* LoginVC.swift */; };
 		0EC303142404AFA100A2270D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC303132404AFA100A2270D /* FeedVC.swift */; };
 		30F7EDE9C3A787F901215926 /* Pods_IanOliviaSocials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EABD0EA91D99C39C22E980 /* Pods_IanOliviaSocials.framework */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E15790A2405F25B00AB2AD8 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		0E15790C2405F26600AB2AD8 /* NewSocialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialVC.swift; sourceTree = "<group>"; };
 		0EC303102404A96300A2270D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0EC303132404AFA100A2270D /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		10EABD0EA91D99C39C22E980 /* Pods_IanOliviaSocials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IanOliviaSocials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1579082405F1FA00AB2AD8 /* DetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E15790A2405F25B00AB2AD8 /* DetailVC.swift */,
+			);
+			path = DetailVC;
+			sourceTree = "<group>";
+		};
+		0E1579092405F20800AB2AD8 /* NewSocialVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E15790C2405F26600AB2AD8 /* NewSocialVC.swift */,
+			);
+			path = NewSocialVC;
+			sourceTree = "<group>";
+		};
 		0EC3030F2404A95300A2270D /* LoginVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,9 +146,11 @@
 		45D14FD3240522E80047494E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0EC3030F2404A95300A2270D /* LoginVC */,
 				45D14FD0240522B70047494E /* SignupVC */,
 				0EC303122404AF9500A2270D /* FeedVC */,
-				0EC3030F2404A95300A2270D /* LoginVC */,
+				0E1579082405F1FA00AB2AD8 /* DetailVC */,
+				0E1579092405F20800AB2AD8 /* NewSocialVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -478,10 +500,12 @@
 			files = (
 				45D14FD2240522CE0047494E /* SignupVC.swift in Sources */,
 				45D4A6EE24049AE700787385 /* AppDelegate.swift in Sources */,
+				0E15790D2405F26600AB2AD8 /* NewSocialVC.swift in Sources */,
 				0EC303142404AFA100A2270D /* FeedVC.swift in Sources */,
 				0EC303112404A96300A2270D /* LoginVC.swift in Sources */,
 				45D4A6F024049AE700787385 /* SceneDelegate.swift in Sources */,
 				45D14FD8240523C10047494E /* SignupManager.swift in Sources */,
+				0E15790B2405F25B00AB2AD8 /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
