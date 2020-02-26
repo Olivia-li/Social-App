@@ -29,6 +29,7 @@ class LoginVC: UIViewController {
         let password = passwordTextfield.text!
         
         let auth = Auth.auth()
+        //Spec asked for login with username not email fix later
         auth.signIn(withEmail: username, password: password) { (user, error) in
             guard error == nil else {
                 self.displayAlert(title: "Error", message: "login error")

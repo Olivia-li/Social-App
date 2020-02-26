@@ -56,6 +56,13 @@ class SignupVC: UIViewController {
         handleRegister()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        super.prepare(for: segue, sender: (Any).self)
+        if let FeedVC = segue.destination as? FeedVC {
+            FeedVC.modalPresentationStyle = .fullScreen
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
