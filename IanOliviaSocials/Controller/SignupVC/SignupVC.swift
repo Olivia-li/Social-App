@@ -41,6 +41,7 @@ class SignupVC: UIViewController {
             let newUserId = usersNode.childByAutoId().key
             let userNode = usersNode.child(newUserId!)
             userNode.updateChildValues(["name": name, "email": email, "username": username])
+            AppManager.currUser = Profile(auth.currentUser!)
             self.performSegue(withIdentifier: "SignupVCtoNC", sender: self)
         }
     }

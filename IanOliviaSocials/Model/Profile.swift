@@ -7,13 +7,31 @@
 //
 
 import Foundation
+import Firebase
 
-class Profile{
+class Profile: User{
     var name: String
+    var id: String
     var hostList: [Event] = []
     var interestList: [Event] = []
     
-    init(name:String){
-        self.name = name
+    let auth = Auth.auth()
+    
+    init(_ user: User){
+        if let name = user.displayName{
+            self.name = name
+        }
+        else{
+            self.name = "No NAme"
+        }
+        self.id = user.uid
+    }
+    
+    func addEvent(event: Event){
+        hostList.append(event)
+    }
+    
+    func addInterest(event: Event){
+        interestList.append(event)
     }
 }

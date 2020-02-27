@@ -7,22 +7,29 @@
 //
 
 import Foundation
+import Firebase
 import UIKit
 
 class Event{
     var name: String
+    var id: String
     var picture: UIImage
     var description: String
-    var date: Date
-    var host: String
+//    var date: Date TODO: Figure out UIDatePicker
+    var host: User
     var RSVP: Int
     
-    init(name: String, picture: UIImage, description: String, date: Date, host: String){
+    init(name: String, id: String, picture: UIImage, description: String, host: User){
         self.name = name
+        self.id = id
         self.picture = picture
         self.description = description
-        self.date = date
+//        self.date = date
         self.host = host
         self.RSVP = 0
+    }
+    
+    func increaseRSVP(){
+        self.RSVP += 1
     }
 }

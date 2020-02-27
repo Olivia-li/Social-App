@@ -30,7 +30,6 @@ class NewSocialVC: UIViewController {
     }
     
     @IBAction func createClicked(_ sender: Any) {
-        
     }
     
 }

@@ -39,6 +39,7 @@ class LoginVC: UIViewController {
                 util.displayAlert(title: "Error", message: "user field cannot be empty", vc: self)
                 return
             }
+            AppManager.currUser = Profile(auth.currentUser!)
             self.performSegue(withIdentifier: "LoginVCtoNC", sender: self)
         }
     }
@@ -49,4 +50,7 @@ class LoginVC: UIViewController {
             NC.modalPresentationStyle = .fullScreen
         }
     }
+    
+    
+    
 }
