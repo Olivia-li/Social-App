@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+//TODO: Combine backend code with login backend code
+
 class SignupVC: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,34 +22,9 @@ class SignupVC: UIViewController {
         super.viewDidLoad()
     }
     
-    func handleRegister() {
-        let name = nameTextField.text!
-        let username = usernameTextField.text!
-        let email = emailTextField.text!
-        let password = passwordTextField.text!
-        let auth = Auth.auth()
-        
-        auth.createUser(withEmail: email, password: password) { (user, error) in
-            guard error == nil else {
-                util.displayAlert(title: "Error", message: error.debugDescription, vc: self)
-                return
-            }
-            guard user != nil else {
-                util.displayAlert(title: "Error", message: "No user", vc: self)
-                return
-            }
-            let db = Database.database().reference()
-            let usersNode = db.child("Users")
-            let newUserId = usersNode.childByAutoId().key
-            let userNode = usersNode.child(newUserId!)
-            userNode.updateChildValues(["name": name, "email": email, "username": username])
-            AppManager.currUser = Profile(auth.currentUser!)
-            self.performSegue(withIdentifier: "SignupVCtoNC", sender: self)
-        }
-    }
     
     @IBAction func signupClicked(_ sender: Any) {
-        handleRegister()
+        AuthManager.handleRegister(nameTextField.text!, usernameTextField.text!, emailTextField.text!, passwordTextField.text!, self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){

@@ -11,4 +11,6 @@ import Firebase
 
 class AppManager{
     static var currUser: Profile!
+    static let db = Database.database().reference()
+    static let auth = Auth.auth()
 }

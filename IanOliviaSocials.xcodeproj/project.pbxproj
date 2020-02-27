@@ -20,6 +20,7 @@
 		45003B9B2407593A0038A214 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45003B9A2407593A0038A214 /* Event.swift */; };
 		45003B9D24075B400038A214 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45003B9C24075B400038A214 /* Profile.swift */; };
 		45003BA12407657F0038A214 /* NewSocialVC-UIDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45003BA02407657F0038A214 /* NewSocialVC-UIDatePicker.swift */; };
+		45003BA32407C8CA0038A214 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45003BA22407C8CA0038A214 /* AuthManager.swift */; };
 		45D14FD2240522CE0047494E /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D14FD1240522CE0047494E /* SignupVC.swift */; };
 		45D14FD8240523C10047494E /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D14FD7240523C10047494E /* AppManager.swift */; };
 		45D4A6EE24049AE700787385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4A6ED24049AE700787385 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		45003B9A2407593A0038A214 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		45003B9C24075B400038A214 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		45003BA02407657F0038A214 /* NewSocialVC-UIDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewSocialVC-UIDatePicker.swift"; sourceTree = "<group>"; };
+		45003BA22407C8CA0038A214 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		45D14FD1240522CE0047494E /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		45D14FD7240523C10047494E /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		45D4A6EA24049AE700787385 /* IanOliviaSocials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IanOliviaSocials.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				45D14FD7240523C10047494E /* AppManager.swift */,
+				45003BA22407C8CA0038A214 /* AuthManager.swift */,
 				45003B98240758BD0038A214 /* EventManager.swift */,
 				45003B9A2407593A0038A214 /* Event.swift */,
 				45003B9C24075B400038A214 /* Profile.swift */,
@@ -524,6 +527,7 @@
 			files = (
 				45D14FD2240522CE0047494E /* SignupVC.swift in Sources */,
 				45D4A6EE24049AE700787385 /* AppDelegate.swift in Sources */,
+				45003BA32407C8CA0038A214 /* AuthManager.swift in Sources */,
 				0E15791124064C0D00AB2AD8 /* EventCell.swift in Sources */,
 				0E157915240667BC00AB2AD8 /* util.swift in Sources */,
 				0E15790D2405F26600AB2AD8 /* NewSocialVC.swift in Sources */,

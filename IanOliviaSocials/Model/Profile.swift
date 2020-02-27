@@ -14,15 +14,13 @@ class Profile: User{
     var id: String
     var hostList: [Event] = []
     var interestList: [Event] = []
-    
-    let auth = Auth.auth()
-    
+        
     init(_ user: User){
         if let name = user.displayName{
             self.name = name
         }
         else{
-            self.name = "No NAme"
+            self.name = "No Name"
         }
         self.id = user.uid
     }

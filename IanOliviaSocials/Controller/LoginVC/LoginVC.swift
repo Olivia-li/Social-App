@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import Firebase
 
+//TODO: Combine backend code with login signup code
+
 class LoginVC: UIViewController {
     
     @IBOutlet weak var usernameTextfield: UITextField!
@@ -21,27 +23,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: Any) {
-        handleLogin()
-    }
-    
-    func handleLogin() {
-        let username = usernameTextfield.text!
-        let password = passwordTextfield.text!
-        
-        let auth = Auth.auth()
-        //Spec asked for login with username not email fix later
-        auth.signIn(withEmail: username, password: password) { (user, error) in
-            guard error == nil else {
-                util.displayAlert(title: "Error", message: "login error", vc: self)
-                return
-            }
-            guard user != nil else {
-                util.displayAlert(title: "Error", message: "user field cannot be empty", vc: self)
-                return
-            }
-            AppManager.currUser = Profile(auth.currentUser!)
-            self.performSegue(withIdentifier: "LoginVCtoNC", sender: self)
-        }
+        AuthManager.handleLogin(usernameTextfield.text!, passwordTextfield.text!, self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
