@@ -10,5 +10,4 @@ import Foundation
 
 class EventManager{
     static var eventList: [Event] = []
-
 }

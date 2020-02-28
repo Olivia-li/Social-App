@@ -12,12 +12,15 @@ import Firebase
 
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return EventManager.eventList.count
-        return 10
+        return EventManager.eventList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventCell
+        let event = EventManager.eventList[indexPath.row]
+        
+        cell.eventNameLabel.text = event.name
+        cell.usernameLabel.text = event.host.name
         return cell
     }
     

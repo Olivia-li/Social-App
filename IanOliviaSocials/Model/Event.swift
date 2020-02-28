@@ -13,16 +13,16 @@ import UIKit
 class Event{
     var name: String
     var id: String
-    var picture: UIImage
+//    var picture: UIImage
     var description: String
 //    var date: Date TODO: Figure out UIDatePicker
-    var host: User
+    var host: Profile
     var RSVP: Int
     
-    init(name: String, id: String, picture: UIImage, description: String, host: User){
+    init(name: String, id: String, description: String, host: Profile){
         self.name = name
         self.id = id
-        self.picture = picture
+//        self.picture = picture
         self.description = description
 //        self.date = date
         self.host = host

@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class Profile: User{
+class Profile{
     var name: String
     var id: String
     var hostList: [Event] = []
