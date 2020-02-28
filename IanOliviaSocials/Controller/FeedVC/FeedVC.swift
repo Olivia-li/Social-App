@@ -27,6 +27,7 @@ class FeedVC: UIViewController {
     @IBAction func logoutClicked(_ sender: Any) {
         do {
             try AppManager.auth.signOut()
+            performSegue(withIdentifier: "unwindToLoginVC", sender: self)
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
         }

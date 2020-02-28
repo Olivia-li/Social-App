@@ -250,9 +250,11 @@
                         <outlet property="tableView" destination="WD5-O3-HLm" id="2HC-Eb-luZ"/>
                         <segue destination="2cQ-bC-FUR" kind="show" identifier="toDetailVC" id="eFi-jP-S7p"/>
                         <segue destination="3tn-v8-nlS" kind="show" identifier="toNewSocialVC" id="h7a-Sy-fF3"/>
+                        <segue destination="8Aw-Vj-DFh" kind="unwind" identifier="unwindToLoginVC" unwindAction="unwindToLoginVCWithSegue:" id="OFY-cN-X6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EhZ-Ji-Kx6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8Aw-Vj-DFh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2826.0869565217395" y="126.5625"/>
         </scene>
