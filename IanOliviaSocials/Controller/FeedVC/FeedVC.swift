@@ -12,18 +12,12 @@ import Firebase
 
 class FeedVC: UIViewController {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-      navigationController?.setNavigationBarHidden(true, animated: true)
-     }
-    
     @IBOutlet weak var tableView: UITableView!
     var segueNum: Int = 0  //0 for segue toNewSocialVC, 1 for toDetailVC
     var clickedEventId: Int = 0  //updated in didSelectRowAt
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
