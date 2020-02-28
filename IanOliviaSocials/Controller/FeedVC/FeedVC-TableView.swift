@@ -27,6 +27,7 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         clickedEventId = indexPath.row
         print( indexPath.row)
+        EventManager.clickedEvent = EventManager.eventList[indexPath.row]
         segueNum = 1
         self.performSegue(withIdentifier: "toDetailVC", sender: self)
     }

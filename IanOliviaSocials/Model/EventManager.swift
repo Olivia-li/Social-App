@@ -10,4 +10,5 @@ import Foundation
 
 class EventManager{
     static var eventList: [Event] = []
+    static var clickedEvent: Event!
 }
