@@ -14,16 +14,15 @@ class Profile{
     var id: String
     var hostList: [Event] = []
     var interestList: [Event] = []
-        
+    
+//    let userRef = AppManager.db.child("Users")
+
     init(_ user: User){
-        if let name = user.displayName{
-            self.name = name
-        }
-        else{
-            self.name = "No Name"
-        }
         self.id = user.uid
+        self.name = "name"
     }
+
+    
     
     func addEvent(event: Event){
         hostList.append(event)

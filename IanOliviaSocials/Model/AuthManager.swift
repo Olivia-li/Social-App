@@ -30,6 +30,7 @@ class AuthManager{
                 return
             }
             AppManager.currUser = Profile(auth.currentUser!)
+            print(AppManager.currUser.name)
             vc.performSegue(withIdentifier: "LoginVCtoNC", sender: vc)
         }
     }

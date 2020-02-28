@@ -65,7 +65,7 @@
                     <connections>
                         <outlet property="passwordTextfield" destination="Uoa-dr-fqP" id="jeW-9A-tvx"/>
                         <outlet property="usernameTextfield" destination="lYd-pu-vgV" id="mmu-Nt-GIe"/>
-                        <segue destination="Scx-me-q3s" kind="show" identifier="LoginVCtoNC" id="fIP-p0-ZBf"/>
+                        <segue destination="Scx-me-q3s" kind="show" identifier="LoginVCtoNC" id="QSU-MO-n4G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -136,7 +136,7 @@
                         <outlet property="nameTextField" destination="ZCx-pD-x2t" id="odP-cq-u3x"/>
                         <outlet property="passwordTextField" destination="sU1-mZ-M47" id="y1G-t6-PI5"/>
                         <outlet property="usernameTextField" destination="dCu-g1-6y2" id="IbA-g9-AZv"/>
-                        <segue destination="Scx-me-q3s" kind="show" identifier="SignupVCtoNC" id="FEa-k4-ico"/>
+                        <segue destination="Scx-me-q3s" kind="show" identifier="SignupVCtoNC" id="zLe-nf-uVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9q-rl-qns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -429,15 +429,15 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vbF-kg-wMp" kind="relationship" relationship="rootViewController" id="SPx-Bb-1kU"/>
+                        <segue destination="vbF-kg-wMp" kind="relationship" relationship="rootViewController" id="A90-J1-eNZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExQ-79-Srh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1988" y="127"/>
+            <point key="canvasLocation" x="1939" y="163"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FEa-k4-ico"/>
+        <segue reference="zLe-nf-uVh"/>
     </inferredMetricsTieBreakers>
 </document>
