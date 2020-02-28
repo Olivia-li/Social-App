@@ -15,12 +15,24 @@ class Profile{
     var hostList: [Event] = []
     var interestList: [Event] = []
     
-//    let userRef = AppManager.db.child("Users")
+    let userRef = AppManager.db.child("Users")
 
     init(_ user: User){
         self.id = user.uid
-        self.name = "name"
+        self.name = "No Name"
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let userID = snapshot.value as? [String: [String: String]] else{
+                print("error")
+                return
+            }
+            guard let userName = userID[user.uid] else{
+                print("Name Error")
+                return
+            }
+            print(userName["name"]!)
+            self.name = userName["name"]!
     }
+        )}
 
     
     

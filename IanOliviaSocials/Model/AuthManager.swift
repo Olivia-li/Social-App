@@ -51,8 +51,7 @@ class AuthManager{
                 return
             }
             let usersNode = db.child("Users")
-            let newUserId = usersNode.childByAutoId().key
-            let userNode = usersNode.child(newUserId!)
+            let userNode = usersNode.child(auth.currentUser!.uid)
             userNode.updateChildValues(["name": name, "email": email, "username": username])
             AppManager.currUser = Profile(auth.currentUser!)
             vc.performSegue(withIdentifier: "SignupVCtoNC", sender: vc)
