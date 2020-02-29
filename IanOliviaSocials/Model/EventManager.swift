@@ -14,16 +14,18 @@ class EventManager{
     static var clickedEvent: Event!
         
     static func retrieveEvents(){
+        print("Retrieve events")
         let ref = AppManager.db
         let userRef = ref.child("Events")
+        print(userRef)
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let usersDict = snapshot.value as? [String: [String: String]] else {
-                print("friends error")
+                print("Can't find events dictionary")
                 return
             }
             for (eventId, _) in usersDict {
                 guard let userInfoDict = usersDict[eventId] else {
-                    print("friends error 2")
+                    print("Can't find event")
                     continue
                 }
                 print(userInfoDict["name"]!)
