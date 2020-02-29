@@ -35,7 +35,7 @@ class FeedVC: UIViewController {
         } catch let signOutError as NSError {
           print ("Error signing out", signOutError)
         }
-        
+        performSegue(withIdentifier: "unwindSegueToLogin", sender: self)
     }
     
     @IBAction func newEventClicked(_ sender: Any) {
