@@ -10,7 +10,11 @@ import Foundation
 import Firebase
 import UIKit
 
-class Event{
+class Event: Equatable{
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     var name: String
     var id: String
 //    var picture: UIImage

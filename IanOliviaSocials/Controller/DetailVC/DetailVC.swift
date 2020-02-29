@@ -31,8 +31,14 @@ class DetailVC: UIViewController {
     }
     
     @IBAction func interestedClicked(_ sender: Any) {
-        AppManager.currUser.addInterest(event: EventManager.clickedEvent)
-        EventManager.clickedEvent.RSVP += 1
+        if AppManager.currUser.interestList.contains(EventManager.clickedEvent){
+            AppManager.currUser.removeInterest(event: EventManager.clickedEvent)
+            EventManager.clickedEvent.RSVP -= 1
+        }
+        else{
+           AppManager.currUser.addInterest(event: EventManager.clickedEvent)
+            EventManager.clickedEvent.RSVP += 1
+        }
         //Spec asks for this button to show up as being checked after clicked so user can select and deselect. Will come back to that.
         // I've added the logic for select and deselecting. Just need the UI
     }

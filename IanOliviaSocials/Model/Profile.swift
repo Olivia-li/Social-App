@@ -43,4 +43,14 @@ class Profile{
     func addInterest(event: Event){
         interestList.append(event)
     }
+    
+    func removeInterest(event: Event){
+        if let itemIndex = interestList.firstIndex(of: event){
+            interestList.remove(at: itemIndex)
+        }
+        else{
+            print("You dungoofed, there's no event >:( ")
+        }
+        
+    }
 }
