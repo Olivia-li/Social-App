@@ -17,12 +17,18 @@ class NewSocialVC: UIViewController {
     
     @IBOutlet weak var eventNameTextfield: UITextField!
     @IBOutlet weak var descriptionTextfield: UITextField!
-    @IBOutlet weak var datepicker: UIDatePicker!
+    @IBOutlet weak var dateTextfield: UITextField!
+    
+    private var datePicker: UIDatePicker?
     
     var chosenImage: UIImage = UIImage(imageLiteralResourceName: "default-image")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .dateAndTime
+        
+        dateTextfield.inputView = datePicker
     }
     
     @IBAction func chooseImageClicked(_ sender: Any) {
@@ -30,8 +36,7 @@ class NewSocialVC: UIViewController {
     }
     
     @IBAction func createClicked(_ sender: Any) {
-//        var name:String
-//        var description:String
+
         if eventNameTextfield.text == ""{
             util.displayAlert(title: "Error", message: "Please put a name", vc: self)
             return
