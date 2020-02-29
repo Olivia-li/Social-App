@@ -17,15 +17,15 @@ class Profile{
     
     let userRef = AppManager.db.child("Users")
 
-    init(_ user: User){
-        self.id = user.uid
+    init(_ userID: String){
+        self.id = userID
         self.name = "No Name"
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let userID = snapshot.value as? [String: [String: String]] else{
+            guard let userref = snapshot.value as? [String: [String: String]] else{
                 print("error")
                 return
             }
-            guard let userName = userID[user.uid] else{
+            guard let userName = userref[userID] else{
                 print("Name Error")
                 return
             }
