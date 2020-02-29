@@ -27,8 +27,16 @@ class NewSocialVC: UIViewController {
         super.viewDidLoad()
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .dateAndTime
-        
+        datePicker?.addTarget(self, action: #selector(NewSocialVC.dateChanged(datePicker:)), for: .valueChanged)
         dateTextfield.inputView = datePicker
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd | HH:mm"
+        dateTextfield.text = dateFormatter.string(for: datePicker.date)
+        //view.endEditing(true)
     }
     
     @IBAction func chooseImageClicked(_ sender: Any) {
