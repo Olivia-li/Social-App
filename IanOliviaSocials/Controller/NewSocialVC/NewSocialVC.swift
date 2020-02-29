@@ -29,6 +29,9 @@ class NewSocialVC: UIViewController {
         datePicker?.datePickerMode = .dateAndTime
         datePicker?.addTarget(self, action: #selector(NewSocialVC.dateChanged(datePicker:)), for: .valueChanged)
         dateTextfield.inputView = datePicker
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(NewSocialVC.viewTapped(gestureRecognizer:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
     @objc func dateChanged(datePicker: UIDatePicker) {
@@ -37,6 +40,10 @@ class NewSocialVC: UIViewController {
         dateFormatter.dateFormat = "MMM dd | HH:mm"
         dateTextfield.text = dateFormatter.string(for: datePicker.date)
         //view.endEditing(true)
+    }
+    
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     @IBAction func chooseImageClicked(_ sender: Any) {
