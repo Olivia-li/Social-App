@@ -32,6 +32,8 @@ class FeedVC: UIViewController {
     @IBAction func logoutClicked(_ sender: Any) {
         do {
             try AppManager.auth.signOut()
+            UserDefaults.standard.set(false, forKey: "usersignedin")
+            UserDefaults.standard.synchronize()
         } catch let signOutError as NSError {
           print ("Error signing out", signOutError)
         }

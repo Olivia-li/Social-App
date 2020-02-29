@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 let auth = AppManager.auth
 let db = AppManager.db
@@ -29,6 +30,8 @@ class AuthManager{
                 util.displayAlert(title: "Error", message: "user field cannot be empty", vc: vc)
                 return
             }
+            UserDefaults.standard.set(true, forKey: "usersignedin")
+            UserDefaults.standard.synchronize()
             AppManager.currUser = Profile(auth.currentUser!.uid)
             print(AppManager.currUser.name)
             vc.performSegue(withIdentifier: "LoginVCtoNC", sender: vc)

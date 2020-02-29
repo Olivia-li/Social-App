@@ -22,12 +22,17 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
-
+        if UserDefaults.standard.bool(forKey: "usersignedin") {
+            performSegue(withIdentifier: "LoginVCtoNC", sender: self)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
-     navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        if UserDefaults.standard.bool(forKey: "usersignedin") {
+            performSegue(withIdentifier: "LoginVCtoNC", sender: self)
+        }
     }
     
     @IBAction func loginClicked(_ sender: Any) {
