@@ -29,7 +29,7 @@ class AuthManager{
                 util.displayAlert(title: "Error", message: "user field cannot be empty", vc: vc)
                 return
             }
-            AppManager.currUser = Profile(auth.currentUser!)
+            AppManager.currUser = Profile(auth.currentUser!.uid)
             print(AppManager.currUser.name)
             vc.performSegue(withIdentifier: "LoginVCtoNC", sender: vc)
         }
@@ -53,7 +53,7 @@ class AuthManager{
             let usersNode = db.child("Users")
             let userNode = usersNode.child(auth.currentUser!.uid)
             userNode.updateChildValues(["name": name, "email": email, "username": username])
-            AppManager.currUser = Profile(auth.currentUser!)
+            AppManager.currUser = Profile(auth.currentUser!.uid)
             vc.performSegue(withIdentifier: "SignupVCtoNC", sender: vc)
         }
     }

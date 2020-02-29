@@ -338,6 +338,7 @@
                         <outlet property="descriptionLabel" destination="NJG-Gf-aet" id="IEX-t1-SQa"/>
                         <outlet property="eventImage" destination="bJ6-BI-9kE" id="WE8-if-4CX"/>
                         <outlet property="eventNameLabel" destination="CH9-qf-ctE" id="kqp-rT-9CU"/>
+                        <outlet property="interestButton" destination="aZf-Rm-otQ" id="dHD-Xx-rEG"/>
                         <outlet property="interestNumLabel" destination="p4w-Ce-Hmv" id="Duu-p8-VGX"/>
                         <outlet property="usernameLabel" destination="bfQ-fL-7kG" id="iiF-os-Eeb"/>
                     </connections>
