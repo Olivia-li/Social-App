@@ -16,9 +16,8 @@ class EventManager{
     static func retrieveEvents(){
         print("Retrieve events")
         let ref = AppManager.db
-        let userRef = ref.child("Events")
-        print(userRef)
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+        let eventRef = ref.child("Events")
+        eventRef.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let usersDict = snapshot.value as? [String: [String: String]] else {
                 print("Can't find events dictionary")
                 return
@@ -31,6 +30,7 @@ class EventManager{
                 print(userInfoDict["name"]!)
                 let event = Event(name: userInfoDict["name"]!, id: eventId, description: userInfoDict["description"]!, host: userInfoDict["host"]!)
                 eventList.append(event)
+                print(eventList)
             }
         })
     }
