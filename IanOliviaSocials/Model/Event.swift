@@ -41,11 +41,11 @@ class Event: Equatable{
         self.RSVP += 1
     }
     
-    func storeInDatabase(name:String, description: String, host: String, RSVP: Int){
+    func storeInDatabase(name:String, id: String, description: String, host: String, RSVP: Int){
         let usersNode = db.child("Events")
         let newUserId = usersNode.childByAutoId().key
         let userNode = usersNode.child(newUserId!)
-        userNode.updateChildValues(["name": name, "description": description, "host": host, "RSVP": RSVP])
+        userNode.updateChildValues(["name": name, "id": id,"description": description, "host": host, "RSVP": RSVP])
     }
     
     

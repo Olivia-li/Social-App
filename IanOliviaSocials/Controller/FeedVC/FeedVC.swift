@@ -21,6 +21,8 @@ class FeedVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        EventManager.retrieveEvents()
+        print(EventManager.eventList)
         tableView.reloadData()
     }
     

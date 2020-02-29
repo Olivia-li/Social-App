@@ -12,10 +12,8 @@ class EventManager{
     
     static var eventList: [Event] = []
     static var clickedEvent: Event!
-    
-    var storedEvents: [Event] = []
-    
-    func retrieveEvents(){
+        
+    static func retrieveEvents(){
         let ref = AppManager.db
         let userRef = ref.child("Events")
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -30,7 +28,7 @@ class EventManager{
                 }
                 print(userInfoDict["name"]!)
                 let event = Event(name: userInfoDict["name"]!, id: eventId, description: userInfoDict["description"]!, host: userInfoDict["host"]!)
-                self.storedEvents.append(event)
+                eventList.append(event)
             }
         })
     }
