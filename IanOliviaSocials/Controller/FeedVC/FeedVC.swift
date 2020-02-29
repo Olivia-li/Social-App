@@ -20,6 +20,11 @@ class FeedVC: UIViewController {
         super.viewDidLoad()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        EventManager.retrieveEvents()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -29,9 +34,9 @@ class FeedVC: UIViewController {
             try AppManager.auth.signOut()
             performSegue(withIdentifier: "unwindToLoginVC", sender: self)
         } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
+          print ("Error signing out", signOutError)
         }
-        
+        performSegue(withIdentifier: "unwindSegueToLogin", sender: self)
     }
     
     @IBAction func newEventClicked(_ sender: Any) {

@@ -17,15 +17,15 @@ class Profile{
     
     let userRef = AppManager.db.child("Users")
 
-    init(_ user: User){
-        self.id = user.uid
+    init(_ userID: String){
+        self.id = userID
         self.name = "No Name"
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let userID = snapshot.value as? [String: [String: String]] else{
+            guard let userref = snapshot.value as? [String: [String: String]] else{
                 print("error")
                 return
             }
-            guard let userName = userID[user.uid] else{
+            guard let userName = userref[userID] else{
                 print("Name Error")
                 return
             }
@@ -40,7 +40,25 @@ class Profile{
         hostList.append(event)
     }
     
+    func removeEvent(event: Event){
+        if let itemIndex = hostList.firstIndex(of: event){
+            hostList.remove(at: itemIndex)
+        }
+        else{
+            print("Can't remove hosted event")
+        }
+    }
+    
     func addInterest(event: Event){
         interestList.append(event)
+    }
+    
+    func removeInterest(event: Event){
+        if let itemIndex = interestList.firstIndex(of: event){
+            interestList.remove(at: itemIndex)
+        }
+        else{
+            print("You dungoofed, there's no event >:( ")
+        }
     }
 }

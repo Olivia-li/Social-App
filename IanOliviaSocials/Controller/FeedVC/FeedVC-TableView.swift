@@ -5,7 +5,6 @@
 //  Created by Ian Shen on 2/25/20.
 //  Copyright © 2020 Olivia Li. All rights reserved.
 //
-
 import Foundation
 import UIKit
 import Firebase
@@ -20,7 +19,7 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         let event = EventManager.eventList[indexPath.row]
         
         cell.eventNameLabel.text = event.name
-        cell.usernameLabel.text = event.host.name
+        cell.usernameLabel.text = event.host
         cell.interestNumLabel.text = "\(event.RSVP) people interested"
         return cell
     }
@@ -28,6 +27,7 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         clickedEventId = indexPath.row
         print( indexPath.row)
+        EventManager.clickedEvent = EventManager.eventList[indexPath.row]
         segueNum = 1
         self.performSegue(withIdentifier: "toDetailVC", sender: self)
     }

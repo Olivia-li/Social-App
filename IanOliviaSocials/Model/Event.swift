@@ -10,16 +10,24 @@ import Foundation
 import Firebase
 import UIKit
 
-class Event{
+class Event: Equatable{
+    
+    let db = AppManager.db
+    
+    
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     var name: String
     var id: String
 //    var picture: UIImage
     var description: String
 //    var date: Date TODO: Figure out UIDatePicker
-    var host: Profile
+    var host: String
     var RSVP: Int
     
-    init(name: String, id: String, description: String, host: Profile){
+    init(name: String, id: String, description: String, host: String){
         self.name = name
         self.id = id
 //        self.picture = picture
@@ -29,7 +37,24 @@ class Event{
         self.RSVP = 0
     }
     
-    func increaseRSVP(){
-        self.RSVP += 1
+    func changeRSVP(positive: Bool){
+        if positive{
+            self.RSVP += 1
+        }
+        else{
+            self.RSVP -= 1
+        }
+        let eventNode = db.child("Events").child(self.id)
+                   eventNode.updateChildValues(["RSVP" : String(self.RSVP)])
     }
+    
+    func storeInDatabase(name:String, id: String, description: String, host: String, RSVP: Int){
+        let eventsNode = db.child("Events")
+        let newEventId = eventsNode.childByAutoId().key
+        let eventNode = eventsNode.child(newEventId!)
+        eventNode.updateChildValues(["name": name, "id": id,"description": description, "host": host, "RSVP": String(RSVP)])
+    }
+    
+    
+    
 }
