@@ -26,7 +26,7 @@ class EventManager{
                     print("Can't find event")
                     continue
                 }
-                let event = Event(name: userInfoDict["name"]!, id: eventId, description: userInfoDict["description"]!, host: userInfoDict["host"]!)
+                let event = Event(name: userInfoDict["name"]!, id: eventId, description: userInfoDict["description"]!, date: userInfoDict["date"]!, host: userInfoDict["host"]!)
                 
                 if !eventList.contains(event){
                     eventList.append(event)

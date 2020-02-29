@@ -60,20 +60,38 @@ class NewSocialVC: UIViewController {
             util.displayAlert(title: "Error", message: "Please put a description", vc: self)
             return
         }
+        if dateTextfield.text == "" {
+            util.displayAlert(title: "Error", message: "Please put a date", vc: self)
+            return
+        }
         
         guard let name = eventNameTextfield.text else {
             util.displayAlert(title: "Error", message: "Please put a name", vc: self)
             return
         }
-        
         guard let description = descriptionTextfield.text else{
-             util.displayAlert(title: "Error", message: "Please put a description", vc: self)
+            util.displayAlert(title: "Error", message: "Please put a description", vc: self)
             return
         }
+        guard let date = dateTextfield.text else{
+            util.displayAlert(title: "Error", message: "Please put a date", vc: self)
+            return
+        }
+//        if dateStr != "" {
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "MMM dd | HH:mm"
+//            guard let date = dateFormatter.date(from: dateStr) else{
+//                util.displayAlert(title: "Error", message: "Error transforming string to date object", vc: self)
+//                return
+//            }
+//        } else{
+//            util.displayAlert(title: "Error", message: "Please put a date", vc: self)
+//        }
+        
         let eventId = eventRef.childByAutoId().key!
-        let event = Event(name: name, id: eventId, description: description, host: AppManager.currUser.name)
+        let event = Event(name: name, id: eventId, description: description, date: date, host: AppManager.currUser.name)
         EventManager.eventList.append(event)
-        event.storeInDatabase(name: name, id: eventId, description: description, host: AppManager.currUser.name, RSVP: 0)
+        event.storeInDatabase(name: name, id: eventId, description: description, date: date, host: AppManager.currUser.name, RSVP: 0)
         _ = navigationController?.popViewController(animated: true)
 
         

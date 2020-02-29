@@ -23,16 +23,16 @@ class Event: Equatable{
     var id: String
 //    var picture: UIImage
     var description: String
-//    var date: Date TODO: Figure out UIDatePicker
+    var date: String
     var host: String
     var RSVP: Int
     
-    init(name: String, id: String, description: String, host: String){
+    init(name: String, id: String, description: String, date: String, host: String){
         self.name = name
         self.id = id
 //        self.picture = picture
         self.description = description
-//        self.date = date
+        self.date = date
         self.host = host
         self.RSVP = 0
     }
@@ -48,11 +48,11 @@ class Event: Equatable{
                    eventNode.updateChildValues(["RSVP" : String(self.RSVP)])
     }
     
-    func storeInDatabase(name:String, id: String, description: String, host: String, RSVP: Int){
+    func storeInDatabase(name:String, id: String, description: String, date: String,  host: String, RSVP: Int){
         let eventsNode = db.child("Events")
         let newEventId = eventsNode.childByAutoId().key
         let eventNode = eventsNode.child(newEventId!)
-        eventNode.updateChildValues(["name": name, "id": id,"description": description, "host": host, "RSVP": String(RSVP)])
+        eventNode.updateChildValues(["name": name, "id": id,"description": description, "date": date, "host": host, "RSVP": String(RSVP)])
     }
     
     
