@@ -19,7 +19,7 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         let event = EventManager.eventList[indexPath.row]
         
         cell.eventNameLabel.text = event.name
-        cell.usernameLabel.text = event.host.name
+        cell.usernameLabel.text = event.host
         cell.interestNumLabel.text = "\(event.RSVP) people interested"
         return cell
     }

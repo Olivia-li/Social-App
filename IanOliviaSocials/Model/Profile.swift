@@ -40,6 +40,15 @@ class Profile{
         hostList.append(event)
     }
     
+    func removeEvent(event: Event){
+        if let itemIndex = hostList.firstIndex(of: event){
+            hostList.remove(at: itemIndex)
+        }
+        else{
+            print("Can't remove hosted event")
+        }
+    }
+    
     func addInterest(event: Event){
         interestList.append(event)
     }
@@ -51,6 +60,5 @@ class Profile{
         else{
             print("You dungoofed, there's no event >:( ")
         }
-        
     }
 }

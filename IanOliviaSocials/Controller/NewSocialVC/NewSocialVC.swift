@@ -53,9 +53,9 @@ class NewSocialVC: UIViewController {
             return
         }
         
-        let event = Event(name: name, id: "idk", description: description, host: AppManager.currUser)
+        let event = Event(name: name, id: "idk", description: description, host: AppManager.currUser.name)
         EventManager.eventList.append(event)
-        event.storeInDatabase(name: name, description: description, hostID: AppManager.currUser.id, RSVP: 0)
+        event.storeInDatabase(name: name, description: description, host: AppManager.currUser.name, RSVP: 0)
         _ = navigationController?.popViewController(animated: true)
 
         

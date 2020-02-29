@@ -24,7 +24,7 @@ class DetailVC: UIViewController {
         super.viewDidLoad()
         
         eventNameLabel.text = EventManager.clickedEvent.name
-        usernameLabel.text = "Host: \(EventManager.clickedEvent.host.name)"
+        usernameLabel.text = "Host: \(EventManager.clickedEvent.host)"
         descriptionLabel.text = EventManager.clickedEvent.description
         interestNumLabel.text = "\(EventManager.clickedEvent.RSVP) people interested"
         //TODO: Need to add the image

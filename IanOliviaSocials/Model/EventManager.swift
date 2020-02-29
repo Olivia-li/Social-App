@@ -15,24 +15,23 @@ class EventManager{
     
     var storedEvents: [Event] = []
     
-//    func retrieveEvents() -> Event{
-//        let ref = AppManager.db
-//        let userRef = ref.child("Events")
-//        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-//            guard let usersDict = snapshot.value as? [String: [String: String]] else {
-//                print("friends error")
-//                return
-//            }
-//            for (eventId, _) in usersDict {
-//                guard let userInfoDict = usersDict[eventId] else {
-//                    print("friends error 2")
-//                    continue
-//                }
-//                print(userInfoDict["name"]!)
-//
-//                let event = Event(name: userInfoDict["name"]!, id: <#T##String#>, description: userInfoDict["description"]!, host: <#T##Profile#>)
-//                storedEvents.append()
-//            }
-//        })
-//    }
+    func retrieveEvents(){
+        let ref = AppManager.db
+        let userRef = ref.child("Events")
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let usersDict = snapshot.value as? [String: [String: String]] else {
+                print("friends error")
+                return
+            }
+            for (eventId, _) in usersDict {
+                guard let userInfoDict = usersDict[eventId] else {
+                    print("friends error 2")
+                    continue
+                }
+                print(userInfoDict["name"]!)
+                let event = Event(name: userInfoDict["name"]!, id: eventId, description: userInfoDict["description"]!, host: userInfoDict["host"]!)
+                self.storedEvents.append(event)
+            }
+        })
+    }
 }
