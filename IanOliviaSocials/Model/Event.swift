@@ -37,15 +37,22 @@ class Event: Equatable{
         self.RSVP = 0
     }
     
-    func increaseRSVP(){
-        self.RSVP += 1
+    func changeRSVP(positive: Bool){
+        if positive{
+            self.RSVP += 1
+        }
+        else{
+            self.RSVP -= 1
+        }
+        let eventNode = db.child("Events").child(self.id)
+                   eventNode.updateChildValues(["RSVP" : String(self.RSVP)])
     }
     
     func storeInDatabase(name:String, id: String, description: String, host: String, RSVP: Int){
-        let usersNode = db.child("Events")
-        let newUserId = usersNode.childByAutoId().key
-        let userNode = usersNode.child(newUserId!)
-        userNode.updateChildValues(["name": name, "id": id,"description": description, "host": host, "RSVP": String(RSVP)])
+        let eventsNode = db.child("Events")
+        let newEventId = eventsNode.childByAutoId().key
+        let eventNode = eventsNode.child(newEventId!)
+        eventNode.updateChildValues(["name": name, "id": id,"description": description, "host": host, "RSVP": String(RSVP)])
     }
     
     

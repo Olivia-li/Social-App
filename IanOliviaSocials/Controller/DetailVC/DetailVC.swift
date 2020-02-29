@@ -41,12 +41,12 @@ class DetailVC: UIViewController {
     @IBAction func interestedClicked(_ sender: Any) {
         if AppManager.currUser.interestList.contains(EventManager.clickedEvent){
             AppManager.currUser.removeInterest(event: EventManager.clickedEvent)
-            EventManager.clickedEvent.RSVP -= 1
+            EventManager.clickedEvent.changeRSVP(positive: false)
             interestButton.setTitle("RSVP!", for: .normal)
         }
         else{
            AppManager.currUser.addInterest(event: EventManager.clickedEvent)
-            EventManager.clickedEvent.RSVP += 1
+            EventManager.clickedEvent.changeRSVP(positive: true)
             interestButton.setTitle("un-RSVP", for: .normal)
         }
         self.viewDidLoad()

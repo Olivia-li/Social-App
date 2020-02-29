@@ -14,7 +14,6 @@ class EventManager{
     static var clickedEvent: Event!
         
     static func retrieveEvents(){
-        print("Retrieve events")
         let ref = AppManager.db
         let eventRef = ref.child("Events")
         eventRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -27,7 +26,6 @@ class EventManager{
                     print("Can't find event")
                     continue
                 }
-                print(userInfoDict["name"]!)
                 let event = Event(name: userInfoDict["name"]!, id: eventId, description: userInfoDict["description"]!, host: userInfoDict["host"]!)
                 eventList.append(event)
                 print(eventList)
