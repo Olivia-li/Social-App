@@ -27,7 +27,10 @@ class EventManager{
                     continue
                 }
                 let event = Event(name: userInfoDict["name"]!, id: eventId, description: userInfoDict["description"]!, host: userInfoDict["host"]!)
-                eventList.append(event)
+                
+                if !eventList.contains(event){
+                    eventList.append(event)
+                }
                 print(eventList)
             }
         })

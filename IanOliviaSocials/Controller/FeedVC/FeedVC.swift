@@ -18,6 +18,10 @@ class FeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         EventManager.retrieveEvents()
     }
     
