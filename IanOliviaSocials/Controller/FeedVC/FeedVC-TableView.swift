@@ -5,7 +5,6 @@
 //  Created by Ian Shen on 2/25/20.
 //  Copyright © 2020 Olivia Li. All rights reserved.
 //
-
 import Foundation
 import UIKit
 import Firebase
@@ -21,6 +20,7 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.eventNameLabel.text = event.name
         cell.usernameLabel.text = event.host.name
+        cell.interestNumLabel.text = "\(event.RSVP) people interested"
         return cell
     }
     

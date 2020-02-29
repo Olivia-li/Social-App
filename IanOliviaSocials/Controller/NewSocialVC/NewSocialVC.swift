@@ -13,6 +13,8 @@ import Firebase
 
 class NewSocialVC: UIViewController {
     
+    let db = AppManager.db
+    
     @IBOutlet weak var eventNameTextfield: UITextField!
     @IBOutlet weak var descriptionTextfield: UITextField!
     @IBOutlet weak var datepicker: UIDatePicker!
@@ -40,6 +42,7 @@ class NewSocialVC: UIViewController {
             util.displayAlert(title: "Error", message: "Please put a description", vc: self)
             return
         }
+        
         guard let name = eventNameTextfield.text else {
             util.displayAlert(title: "Error", message: "Please put a name", vc: self)
             return
@@ -52,6 +55,7 @@ class NewSocialVC: UIViewController {
         
         let event = Event(name: name, id: "idk", description: description, host: AppManager.currUser)
         EventManager.eventList.append(event)
+        event.storeInDatabase(name: name, description: description, hostID: AppManager.currUser.id, RSVP: 0)
         _ = navigationController?.popViewController(animated: true)
 
         

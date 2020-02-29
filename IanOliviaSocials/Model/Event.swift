@@ -11,6 +11,10 @@ import Firebase
 import UIKit
 
 class Event: Equatable{
+    
+    let db = AppManager.db
+    
+    
     static func == (lhs: Event, rhs: Event) -> Bool {
         return lhs.id == rhs.id
     }
@@ -36,4 +40,14 @@ class Event: Equatable{
     func increaseRSVP(){
         self.RSVP += 1
     }
+    
+    func storeInDatabase(name:String, description: String, hostID: String){
+        let usersNode = db.child("Events")
+        let newUserId = usersNode.childByAutoId().key
+        let userNode = usersNode.child(newUserId!)
+        userNode.updateChildValues(["name": name, "description": description, "hostID": hostID, "RSVP": 0])
+    }
+    
+    
+    
 }
