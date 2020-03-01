@@ -18,8 +18,8 @@ class FeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.set(true, forKey: "usersignedin")
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.set(true, forKey: "usersignedin")
+//        UserDefaults.standard.synchronize()
 //        print("In FeedVC") //REMOVE
 //        print(UserDefaults.standard.bool(forKey: "usersignedin")) //REMOVE
     }
@@ -40,8 +40,8 @@ class FeedVC: UIViewController {
         do {
 //            print("In Logout do statement") //REMOVE
             try AppManager.auth.signOut()
-            UserDefaults.standard.set(false, forKey: "usersignedin")
-            UserDefaults.standard.synchronize()
+//            UserDefaults.standard.set(false, forKey: "usersignedin")
+//            UserDefaults.standard.synchronize()
 //            print(UserDefaults.standard.bool(forKey: "usersignedin")) //REMOVE
 //            UserDefaults.standard.synchronize() //REMOVE
         } catch let signOutError as NSError {

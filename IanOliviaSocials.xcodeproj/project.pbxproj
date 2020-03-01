@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E031FAC240B5DA50070CBFA /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E031FAB240B5DA50070CBFA /* UserDefaultsHelper.swift */; };
 		0E15790B2405F25B00AB2AD8 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790A2405F25B00AB2AD8 /* DetailVC.swift */; };
 		0E15790D2405F26600AB2AD8 /* NewSocialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790C2405F26600AB2AD8 /* NewSocialVC.swift */; };
 		0E15790F24064B5200AB2AD8 /* FeedVC-TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E15790E24064B5200AB2AD8 /* FeedVC-TableView.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E031FAB240B5DA50070CBFA /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		0E15790A2405F25B00AB2AD8 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		0E15790C2405F26600AB2AD8 /* NewSocialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialVC.swift; sourceTree = "<group>"; };
 		0E15790E24064B5200AB2AD8 /* FeedVC-TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC-TableView.swift"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				45D4A6EF24049AE700787385 /* SceneDelegate.swift */,
 				45D4A6F324049AE700787385 /* Main.storyboard */,
 				0E157914240667BC00AB2AD8 /* util.swift */,
+				0E031FAB240B5DA50070CBFA /* UserDefaultsHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				45D4A6F024049AE700787385 /* SceneDelegate.swift in Sources */,
 				45D14FD8240523C10047494E /* AppManager.swift in Sources */,
 				45003B9D24075B400038A214 /* Profile.swift in Sources */,
+				0E031FAC240B5DA50070CBFA /* UserDefaultsHelper.swift in Sources */,
 				0E15790B2405F25B00AB2AD8 /* DetailVC.swift in Sources */,
 				0E15790F24064B5200AB2AD8 /* FeedVC-TableView.swift in Sources */,
 				45003B9B2407593A0038A214 /* Event.swift in Sources */,
