@@ -18,7 +18,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var interestNumLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var interestButton: UIButton!
-    //TODO: Need to add date
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class DetailVC: UIViewController {
         descriptionLabel.text = EventManager.clickedEvent.description
         interestNumLabel.text = "\(EventManager.clickedEvent.RSVP) people interested"
         //TODO: Need to add the image
-        //TODO: Need to add the date
+        dateLabel.text = EventManager.clickedEvent.date
         
         if AppManager.currUser.interestList.contains(EventManager.clickedEvent){
             interestButton.setTitle("un-RSVP", for: .normal)
