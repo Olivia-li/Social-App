@@ -266,12 +266,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-qf-ctE">
-                                <rect key="frame" x="20" y="133" width="374" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host's username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-fL-7kG">
                                 <rect key="frame" x="20" y="530" width="374" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
@@ -279,7 +273,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-BI-9kE">
-                                <rect key="frame" x="20" y="190" width="374" height="323"/>
+                                <rect key="frame" x="20" y="193" width="374" height="320"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Description:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsW-wf-gJU">
                                 <rect key="frame" x="20" y="572" width="203" height="30"/>
@@ -307,13 +301,27 @@
                                     <action selector="interestedClicked:" destination="2cQ-bC-FUR" eventType="touchUpInside" id="jVO-0M-4Ya"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-C7-M10">
+                                <rect key="frame" x="20" y="150" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH9-qf-ctE">
+                                <rect key="frame" x="20" y="94" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Bf4-EG-H2e" firstAttribute="trailing" secondItem="CH9-qf-ctE" secondAttribute="trailing" constant="20" id="4NH-5P-sER"/>
                             <constraint firstItem="Bf4-EG-H2e" firstAttribute="trailing" secondItem="bJ6-BI-9kE" secondAttribute="trailing" constant="20" id="5X5-Bw-3BN"/>
-                            <constraint firstItem="bJ6-BI-9kE" firstAttribute="top" secondItem="CH9-qf-ctE" secondAttribute="bottom" constant="9" id="6pn-fq-LaT"/>
+                            <constraint firstItem="Bf4-EG-H2e" firstAttribute="trailing" secondItem="JRj-C7-M10" secondAttribute="trailing" constant="20" id="90e-sJ-Oij"/>
                             <constraint firstItem="NJG-Gf-aet" firstAttribute="top" secondItem="tsW-wf-gJU" secondAttribute="bottom" constant="8" id="9fB-jg-J84"/>
+                            <constraint firstItem="CH9-qf-ctE" firstAttribute="top" secondItem="Bf4-EG-H2e" secondAttribute="top" constant="38" id="ByW-RG-VVD"/>
+                            <constraint firstItem="JRj-C7-M10" firstAttribute="leading" secondItem="Bf4-EG-H2e" secondAttribute="leading" constant="20" id="F4z-dI-qov"/>
                             <constraint firstItem="bfQ-fL-7kG" firstAttribute="top" secondItem="bJ6-BI-9kE" secondAttribute="bottom" constant="17" id="Fn3-x4-sRW"/>
                             <constraint firstItem="Bf4-EG-H2e" firstAttribute="bottom" secondItem="aZf-Rm-otQ" secondAttribute="bottom" constant="38" id="GGZ-0b-f6u"/>
                             <constraint firstItem="Bf4-EG-H2e" firstAttribute="trailing" secondItem="aZf-Rm-otQ" secondAttribute="trailing" constant="140" id="Jl7-Yp-MgV"/>
@@ -321,10 +329,11 @@
                             <constraint firstItem="aZf-Rm-otQ" firstAttribute="top" secondItem="p4w-Ce-Hmv" secondAttribute="bottom" constant="36" id="O6D-yw-ikB"/>
                             <constraint firstItem="tsW-wf-gJU" firstAttribute="top" secondItem="bfQ-fL-7kG" secondAttribute="bottom" constant="12" id="ThQ-01-odc"/>
                             <constraint firstItem="Bf4-EG-H2e" firstAttribute="trailing" secondItem="tsW-wf-gJU" secondAttribute="trailing" constant="191" id="Uxv-qd-Zrd"/>
+                            <constraint firstItem="bJ6-BI-9kE" firstAttribute="top" secondItem="JRj-C7-M10" secondAttribute="bottom" constant="19" id="ajz-ot-uf3"/>
                             <constraint firstItem="bJ6-BI-9kE" firstAttribute="leading" secondItem="Bf4-EG-H2e" secondAttribute="leading" constant="20" id="e3g-Uy-Zhr"/>
                             <constraint firstItem="CH9-qf-ctE" firstAttribute="leading" secondItem="Bf4-EG-H2e" secondAttribute="leading" constant="20" id="fhd-fH-hCP"/>
                             <constraint firstItem="bfQ-fL-7kG" firstAttribute="leading" secondItem="Bf4-EG-H2e" secondAttribute="leading" constant="20" id="gRe-pG-j1h"/>
-                            <constraint firstItem="CH9-qf-ctE" firstAttribute="top" secondItem="Bf4-EG-H2e" secondAttribute="top" constant="77" id="hBP-Ey-rdL"/>
+                            <constraint firstItem="JRj-C7-M10" firstAttribute="top" secondItem="CH9-qf-ctE" secondAttribute="bottom" constant="8" id="hGm-6t-UXD"/>
                             <constraint firstItem="p4w-Ce-Hmv" firstAttribute="leading" secondItem="Bf4-EG-H2e" secondAttribute="leading" constant="20" id="jFH-tC-sPK"/>
                             <constraint firstItem="Bf4-EG-H2e" firstAttribute="trailing" secondItem="p4w-Ce-Hmv" secondAttribute="trailing" constant="20" id="kQ2-bi-VQN"/>
                             <constraint firstItem="Bf4-EG-H2e" firstAttribute="trailing" secondItem="bfQ-fL-7kG" secondAttribute="trailing" constant="20" id="p81-ON-z5H"/>
@@ -337,6 +346,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lgg-WB-Kpo"/>
                     <connections>
+                        <outlet property="dateLabel" destination="JRj-C7-M10" id="daO-lz-SZw"/>
                         <outlet property="descriptionLabel" destination="NJG-Gf-aet" id="IEX-t1-SQa"/>
                         <outlet property="eventImage" destination="bJ6-BI-9kE" id="WE8-if-4CX"/>
                         <outlet property="eventNameLabel" destination="CH9-qf-ctE" id="kqp-rT-9CU"/>
