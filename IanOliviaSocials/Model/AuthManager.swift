@@ -19,8 +19,7 @@ class AuthManager{
     static func handleLogin(_ username: String, _ password: String, _ vc: UIViewController) {
         let username = username
         let password = password
-        
-        //Spec asked for login with username not email fix later
+
         auth.signIn(withEmail: username, password: password) { (user, error) in
             guard error == nil else {
                 util.displayAlert(title: "Error", message: "login error", vc: vc)
@@ -30,8 +29,6 @@ class AuthManager{
                 util.displayAlert(title: "Error", message: "user field cannot be empty", vc: vc)
                 return
             }
-            UserDefaults.standard.set(true, forKey: "usersignedin")
-            UserDefaults.standard.synchronize()
             AppManager.currUser = Profile(auth.currentUser!.uid)
             print(AppManager.currUser.name)
             vc.performSegue(withIdentifier: "LoginVCtoNC", sender: vc)

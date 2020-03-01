@@ -22,16 +22,20 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
-        if UserDefaults.standard.bool(forKey: "usersignedin") {
-            performSegue(withIdentifier: "LoginVCtoNC", sender: self)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
-        if UserDefaults.standard.bool(forKey: "usersignedin") {
-            performSegue(withIdentifier: "LoginVCtoNC", sender: self)
+//        print("In viewWillAppear") //REMOVE
+//        print(UserDefaults.standard.bool(forKey: "usersignedin")) //REMOVE
+//        if UserDefaults.standard.bool(forKey: "usersignedin") {
+//            print("In viewWillAppear If statement") //REMOVE
+//            print(UserDefaults.standard.bool(forKey: "usersignedin")) //REMOVE
+//            self.performSegue(withIdentifier: "LoginVCtoNC", sender: self)
+//        }
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "LoginVCtoNC", sender: self)
         }
     }
     
